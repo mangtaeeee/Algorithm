@@ -16,7 +16,7 @@ public class Main2525 {
 		if(a >= 24) {
 			a -= 24;
 		}
-		b = (b+c) %60;
+		b = (b+c) % 60;
 		System.out.print(a + " " + b);
 		
 
