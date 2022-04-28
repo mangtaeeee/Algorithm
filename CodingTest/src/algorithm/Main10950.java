@@ -9,11 +9,9 @@ public class Main10950 {
 		
 		
 		int n = input.nextInt();
-		int x = input.nextInt();
-		int y = input.nextInt();
+		
 		
 		for(int i=0 ; i < n; i ++ ) {
-			System.out.println(x+y);
 		}
 		input.close();
 	}
