@@ -18,9 +18,12 @@ public class Main11022 {
         
 		StringTokenizer st;
 		for (int i = 1; i <= T; i++) {
+			//공백 제거 후 끊어주기
 			st = new StringTokenizer(br.readLine()," ");
+			//다음 토큰을 읽어서 넣음 형변환까지 한번에
 			A = Integer.parseInt(st.nextToken());
 			B = Integer.parseInt(st.nextToken());
+			//출력
 			System.out.println("Case #" + i + ": " + A + " + " + B + " = " + (A+B));
 		}
 		br.close();
