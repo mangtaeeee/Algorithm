@@ -39,8 +39,6 @@ public class Main10819 {
 	            if(!visited[i]){
 	                visited[i] = true;
 	                selected[count] = nums[i];
-	                System.out.println();
-	                
 	                dfs(count+1);
 	                visited[i] = false;
 	            }
@@ -51,6 +49,7 @@ public class Main10819 {
 	        int sum=0;
 	        for(int i=0; i<n-1; i++){
 	            sum += Math.abs(selected[i]-selected[i+1]);
+	            
 	        }
 	        return sum;
 	    }
