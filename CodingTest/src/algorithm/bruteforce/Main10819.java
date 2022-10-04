@@ -1,4 +1,4 @@
-package CodingTest.src.algorithm.bruteforce;
+package algorithm.bruteforce;
 
 import java.io.BufferedReader;
 import java.io.IOException;
