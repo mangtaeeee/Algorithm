@@ -12,7 +12,9 @@ public class Main15649v2 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         StringTokenizer st = new StringTokenizer(br.readLine());
+
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
@@ -24,9 +26,6 @@ public class Main15649v2 {
         dfs(N,M,0);
         System.out.println(sb);
 
-
-
-
     }
 
     public static void dfs(int N, int M, int count) {
@@ -35,6 +34,7 @@ public class Main15649v2 {
                 sb.append(val).append(' ');
             }
             sb.append('\n');
+            return;
         }
         for (int i = 0 ; i < N; i++){
             //만약 visit 의 값이 true와 같지 않다면
