@@ -27,7 +27,7 @@ public class Main15649 {
         if(dept == M){
             //arr[] 안에 값을 반복을 통해 출력
             for (int val : arr) {
-                System.out.println(val + " ");
+                System.out.print(val + " ");
             }
             System.out.println();
             return;
