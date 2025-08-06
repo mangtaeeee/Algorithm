@@ -20,9 +20,12 @@ public class Main1931 {
 
         // 2) 종료 시간 ↑, 종료 같으면 시작 시간 ↑ 정렬
         Arrays.sort(ar, (a, b) -> {
-            if (a[1] != b[1]) return a[1] - b[1];
+            if (a[1] != b[1]) {
+                return a[1] - b[1];
+            }
             return a[0] - b[0];
         });
+
 
         // 3) 그리디로 회의 선택
         int currentEnd = 0;
@@ -31,9 +34,9 @@ public class Main1931 {
                 count++;
                 currentEnd = ar[i][1];
             }
+
         }
 
-        System.out.println(count);
 
     }
 }
