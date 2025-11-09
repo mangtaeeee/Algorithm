@@ -33,6 +33,7 @@ public class Main1316 {
     }
 
     private static boolean isGroupWord(String word) {
+
         Set<Character> characterSet = new HashSet<>();
         char prev = word.charAt(0);
         characterSet.add(prev);

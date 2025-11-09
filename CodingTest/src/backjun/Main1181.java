@@ -24,6 +24,7 @@ public class Main1181 {
 
         // 중복 제거 및 정렬
         Set<String> uniqueWords = new HashSet<>(Arrays.asList(words));
+        System.out.println("uniqueWords = " + uniqueWords);
         String[] sortedWords = uniqueWords.stream()
                 .sorted((a, b) -> {
                     if (a.length() == b.length()) {
