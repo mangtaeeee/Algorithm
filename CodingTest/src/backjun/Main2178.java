@@ -51,7 +51,7 @@ public class Main2178 {
                 int ny = p.y + dy[dir];
 
                 // 범위 체크 & 방문하지 않았으며 길(1)이면
-                if (nx >= 0 && nx < N && ny >= 0 && ny < M) {
+                    if (nx >= 0 && nx < N && ny >= 0 && ny < M) {
                     if (!visited[nx][ny] && maze[nx][ny] == 1) {
                         visited[nx][ny] = true;
                         queue.add(new Point(nx, ny, p.count + 1));
