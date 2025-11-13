@@ -2,6 +2,7 @@ package backjun.day17;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main2667dfs {
@@ -34,6 +35,23 @@ public class Main2667dfs {
         }
 
         ArrayList<Integer> result = new ArrayList<>();
+
+        // 전체 지도 탐색
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (danji[i][j] == 1 && !visited[i][j]) {
+                    count = 0;        // 새 단지 시작
+                    dfs(i, j);        // DFS로 연결된 집 탐색
+                    result.add(count);
+                }
+            }
+        }
+
+        Collections.sort(result); // 오름차순 정렬
+        System.out.println(result.size());
+        for (int num : result) {
+            System.out.println(num);
+        }
 
     }
 
