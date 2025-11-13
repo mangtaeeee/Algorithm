@@ -40,30 +40,27 @@ public class Main2178 {
     }
 
     static int bfs (int startX, int startY) {
-        Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] {startX, startY});
+        Queue<Point> queue = new LinkedList<>();
+        queue.add(new Point(startX, startY , 1));
         //방문 처리
         visited[startX][startY] = true;
         int count = 1;
 
         while (!queue.isEmpty()) {
-            int[] now = queue.poll();
-            int cx = now[0];
-            int cy = now[1];
+            Point p = queue.poll();
 
-            if (cx == N - 1 && cy == M - 1) {
-                return count;
+            if (p.x == N - 1 && p.y == M - 1) {
+                return p.count;
             }
 
             for (int dir = 0; dir < 4; dir++) {
-                int nx = cx + dx[dir];
-                int ny = cy + dy[dir];
+                int nx = p.x + dx[dir];
+                int ny = p.y + dy[dir];
 
                 if (nx >= 0 && nx < N && ny >= 0 && ny < M) {
                     if (!visited[nx][ny] && maze[nx][ny] == 1) {
                         visited[nx][ny] = true;
-                        queue.add(new int[]{nx, ny});
-                        count = count + 1;
+                        queue.add(new Point(nx, ny, p.count + 1));
                     }
                 }
 
@@ -72,5 +69,15 @@ public class Main2178 {
 
         }
         return -1;
+    }
+
+    static class Point {
+        int x, y, count;
+
+        Point(int x, int y, int count) {
+            this.x = x;
+            this.y = y;
+            this.count = count;
+        }
     }
 }
