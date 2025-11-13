@@ -72,5 +72,14 @@ public class Main2178 {
             this.y = y;
             this.count = count;
         }
+
+        @Override
+        public String toString() {
+            return "Point{" +
+                    "x=" + x +
+                    ", y=" + y +
+                    ", count=" + count +
+                    '}';
+        }
     }
 }
