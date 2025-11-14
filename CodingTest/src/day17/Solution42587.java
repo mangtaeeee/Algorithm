@@ -1,9 +1,7 @@
-package backjun.day17;
+package day17;
 
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class Solution42587 {
 

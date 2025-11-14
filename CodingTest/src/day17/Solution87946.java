@@ -1,10 +1,4 @@
-package backjun.day17;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Collectors;
+package day17;
 
 public class Solution87946 {
 
