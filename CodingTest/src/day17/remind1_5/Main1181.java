@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main1181 {
 
@@ -25,7 +26,7 @@ public class Main1181 {
                         return a.compareTo(b);
                     }
                     return Integer.compare(a.length(), b.length());
-                }).toList();
+                }).collect(Collectors.toList());
 
         for (String s : list) {
             System.out.println(s);
