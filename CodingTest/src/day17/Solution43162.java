@@ -2,30 +2,28 @@ package day17;
 
 public class Solution43162 {
 
-    static boolean[] visited;
-
-    public static void main(String[] args) {
-        Solution43162 solution43162 = new Solution43162();
-        int[][] ar = new int[][]{{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
-    }
+    //방문여부
+    boolean[] visited;
 
     public int solution(int n, int[][] computers) {
-        int answer = 0;
+        visited = new boolean[n];
+        int count = 0;
 
-        for (int i = 0; i < n; i ++) {
+        for (int i = 0 ; i < computers.length ; i ++) {
             if (!visited[i]) {
-                dfs(computers, i , visited);
-                answer++;
+                count ++;
+                dfs(i, computers);
             }
         }
-        return answer;
+        return count;
     }
 
-    static void dfs(int[][] computers, int node, boolean[] visited) {
-        visited[node] = true;
-        for (int i = 0; i < computers.length; i++) {
-            if (i != node && computers[node][i] == 1 && !visited[i] ) {
-                dfs(computers, i, visited);
+    public void dfs(int nowNumber, int[][] computers) {
+        visited[nowNumber] = true;
+
+        for (int next = 0 ; next < computers.length; next ++) {
+            if (computers[nowNumber][next] == 1 && !visited[next]) {
+                dfs(next, computers);
             }
         }
     }
